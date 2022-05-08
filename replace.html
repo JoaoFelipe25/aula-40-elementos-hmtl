@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">ola mundi</h1>
+        <p id="text">mussum ipsum cevadis num lembris du restsi</p>
+    </div>
+
+    <button type="button" onclick="replace()">substituir</button>
+
+    <script>
+
+        function replace() {
+
+            //obtendo o nó pai
+            var parent = document.getElementById("main");
+
+            //obtendo paragrado com o texto antigo
+            var old_text = document.getElementById("text")
+
+            //criando  um novo elemento de paragrafo
+            var new_text = document.createElement("p");
+
+            //criando um novo texto para o paragrafo
+            var new_content = document.createTextNode("mussum aprovis suco de cevadis")
+
+            //inserindo o texto criado ao elemento paragrafo
+            new_text.appendChild(new_content);
+
+            //substituindo o texto antigo pelo novo
+            parent.replaceChild(new_text, old_text)
+        }
+    </script>
+</body>
+</html>
